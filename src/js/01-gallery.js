@@ -30,3 +30,44 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
   captionsData: 'alt',
 });
+
+//v2
+
+// const galleryEl = document.querySelector('.gallery');
+// galleryEl.insertAdjacentHTML(
+//   'beforeend',
+//   galleryItems
+//     .map(
+//       galleryItem =>
+//         `<a href="${galleryItem.original}" class="gallery__link">
+//     <img src="${galleryItem.preview}" alt="${galleryItem.description}" class="gallery__image">
+//   </a>`
+//     )
+//     .join('')
+// );
+
+// const lightbox = new SimpleLightbox('.gallery a', {
+//   captionDelay: 250,
+//   captionsData: 'alt',
+// });
+
+
+//v3
+
+// const galleryEl = document.querySelector('.gallery');
+// const imageEl = galleryItems
+//   .map(
+//     galleryItem => `
+//   <a class="gallery__link" href="${galleryItem.original}">
+//     <img class="gallery__image" src="${galleryItem.preview}" alt="${galleryItem.description}">
+//   </a>
+// `
+//   )
+//   .join('');
+
+// galleryEl.innerHTML = imageEl;
+
+// const lightbox = new SimpleLightbox('.gallery a', {
+//   captionDelay: 250,
+//   captionsData: 'alt',
+// });
